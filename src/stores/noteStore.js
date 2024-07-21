@@ -7,7 +7,7 @@ export const useNoteStore = defineStore('note', {
   actions: {
     async fetchNote(id) {
       try {
-        const response = await fetch(`http://62.72.5.95:1999/notes/${id}`);
+        const response = await fetch(`https://post-it.epi-bluelock.bj/${id}`);
         if (response.ok) {
           this.note = await response.json();
           //console.log(this.note);
@@ -21,7 +21,7 @@ export const useNoteStore = defineStore('note', {
      async deleteNote() {
        if (!this.note?._id) return;
        try {
-         const response = await fetch(`http://62.72.5.95:1999/notes/${this.note._id}`, { method: 'DELETE' });
+         const response = await fetch(`https://post-it.epi-bluelock.bj/${this.note._id}`, { method: 'DELETE' });
          if (response.ok) {
            this.note = null;
            //console.log(this.note);

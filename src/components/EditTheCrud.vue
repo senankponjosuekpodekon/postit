@@ -65,7 +65,7 @@ onMounted(() => {
 });
 
 const getNotesData = (notesId) => {
-    axios.get(`http://62.72.5.95:1999/notes/${notesId}`)
+    axios.get(`https://post-it.epi-bluelock.bj/${notesId}`)
     .then(res => {
         console.log(res.data);
         // model.value.notes = res.data.notes
@@ -82,7 +82,7 @@ const getNotesData = (notesId) => {
 };
 
 const updateNotes = () => {
-    axios.put(`http://62.72.5.95:1999/notes/${notesId.value}`, model.value.notes)
+    axios.put(`https://post-it.epi-bluelock.bj/${notesId.value}`, model.value.notes)
     .then(res => {
         console.log(res.data);
         //alert(res.data.content); 

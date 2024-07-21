@@ -75,7 +75,7 @@ export default {
     methods: {
         saveNotes(){
             var mythis = this;
-            axios.post('http://62.72.5.95:1999/notes', this.model.notes)
+            axios.post('https://post-it.epi-bluelock.bj', this.model.notes)
             .then(res => {
                 console.log(res.data)
                 //alert(res.data.content); 
