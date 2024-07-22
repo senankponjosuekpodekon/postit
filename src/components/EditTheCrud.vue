@@ -82,7 +82,7 @@ const getNotesData = (notesId) => {
 };
 
 const updateNotes = () => {
-    axios.put(`https://post-it.epi-bluelock.bj/${notesId.value}`, model.value.notes)
+    axios.put(`https://post-it.epi-bluelock.bj/notes/${notesId.value}`, model.value.notes)
     .then(res => {
         console.log(res.data);
         //alert(res.data.content); 
