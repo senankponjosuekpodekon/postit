@@ -65,7 +65,7 @@ onMounted(() => {
 });
 
 const getNotesData = (notesId) => {
-    axios.get(`https://post-it.epi-bluelock.bj/${notesId}`)
+    axios.get(`https://post-it.epi-bluelock.bj/notes/${notesId}`)
     .then(res => {
         console.log(res.data);
         // model.value.notes = res.data.notes
