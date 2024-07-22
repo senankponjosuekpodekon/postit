@@ -75,7 +75,7 @@ onMounted(() => {
 const fetchNotes = async () => {
     isLoading.value = true
     try {
-        const response = await fetch("https://post-it.epi-bluelock.bj")
+        const response = await fetch("https://post-it.epi-bluelock.bj/notes/")
         const data = await response.json()
         totalPostit.value = data.notes
     } catch (error) {
@@ -104,7 +104,7 @@ const changePage = (page) => {
 const deleted = async (id) => {
     isLoading.value = true
     try {
-        await fetch(`https://post-it.epi-bluelock.bj/${id}`, { method: 'DELETE' })
+        await fetch(`https://post-it.epi-bluelock.bj/notes/${id}`, { method: 'DELETE' })
         fetchNotes()
     } catch (error) {
         console.error('Error deleting note:', error)
